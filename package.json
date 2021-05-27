@@ -1,0 +1,78 @@
+{
+  "name": "taro-lib-example",
+  "version": "1.0.0",
+  "description": "taro 公共库例子",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "types": "types/index.d.ts",
+  "repository": "https://github.com/BadmasterY/taro-lib-example.git",
+  "author": "Mr. <yuzhoujie95@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "dist",
+    "types"
+  ],
+  "templateInfo": {
+    "name": "redux",
+    "typescript": true,
+    "css": "sass"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "scripts": {
+    "start": "yarn dev:weapp",
+    "dev:weapp": "yarn build:weapp -- --watch",
+    "build:weapp": "taro build --type weapp",
+    "build": "yarn build:types && yarn build:dist",
+    "build:dist": "rollup --config ./rollup.config.ts",
+    "build:types": "tsc --build tsconfig.types.json"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.7.7",
+    "@tarojs/components": "3.1.5",
+    "@tarojs/react": "3.1.5",
+    "@tarojs/runtime": "3.1.5",
+    "@tarojs/taro": "3.1.5",
+    "@babel/core": "^7.8.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-image": "^2.0.6",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-strip": "^2.0.1",
+    "@tarojs/cli": "3.1.5",
+    "@tarojs/mini-runner": "3.1.5",
+    "@tarojs/webpack-runner": "3.1.5",
+    "@types/react": "^17.0.2",
+    "@types/webpack-env": "^1.13.6",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "babel-preset-taro": "3.1.5",
+    "eslint": "^6.8.0",
+    "eslint-config-taro": "3.1.5",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "rollup": "^2.50.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-img": "^1.1.0",
+    "rollup-plugin-scss": "^2.6.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "stylelint": "9.3.0",
+    "typescript": "^4.1.0"
+  }
+}
